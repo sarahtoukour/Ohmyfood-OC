@@ -3,7 +3,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +20,8 @@
 
 @keyframes flash {
   0% {
-    color: hsl(165deg, 55%, 74%);
-    text-shadow: 0 0 7px hsl(165deg, 55%, 74%);
+    color: hsl(267deg, 65%, 60%);
+    text-shadow: 0 0 7px hsl(267deg, 65%, 60%);
   }
   90% {
     color: hsl(300deg, 100%, 73%);
@@ -75,7 +75,6 @@
   }
   100% {
     opacity: 0;
-    z-index: -1;
   }
 }
 .title {
