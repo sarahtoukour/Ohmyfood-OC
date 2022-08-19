@@ -1,0 +1,78 @@
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 18px;
+    font-family: $font-primary;
+    background-color: #e5e5e5;
+    box-shadow: inset 0px 8px 6px -6px rgb(146, 145, 145);
+    i{
+        font-size: 1.06rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+}
+
+.explore {
+    font-family: $font-primary;
+    text-align: center;
+    padding: 20px 10px 60px 10px;
+    background-color: #f7f5f5;
+    &__text {
+        font-weight: 200;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 48px 16px 48px 24px;
+    font-family: $font-primary;
+    counter-reset: stepList;
+}
+
+.options__choice {
+    display: flex;
+    position: relative;
+    padding: 26px 19px 26px 30px;
+    gap: 15px;
+    border-radius: 25px;
+    background-color: #f7f5f5;
+    box-shadow: 4px 4px 6px rgb(170, 170, 170);
+    font-weight: 500;
+    cursor: pointer;
+    max-width: 400px;
+
+    i{
+        opacity: 0.5;
+    }
+
+    &::before {
+        position: absolute;
+        left: -10px;
+        counter-increment: stepList 1;
+        content: counter(stepList) " ";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-prim;
+        border-radius: 100px;
+        width: 22px;
+        height: 22px;
+        color: white;
+    }
+
+    &:hover {
+        background-color: #7045a52a;
+    }
+
+    &:hover i {
+        color: $color-prim;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahtoukour/Ohmyfood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahtoukour/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/sarahtoukour/Ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.54.4"
+  }
+}
