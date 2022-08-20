@@ -76,3 +76,44 @@
         opacity: 1;
     }
 }
+
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-primary;
+    padding: 48px 25px;
+    background: #f7f5f5;
+    gap: 25px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px rgb(170, 170, 170);
+    text-decoration: none;
+    
+    &__img {
+        object-fit: cover;
+        height: 160px;
+        width: 100%;
+        background: #fff;
+        border-radius: 20px 20px 0 0;
+        
+    }
+
+    &__text {
+        padding: 12px 14px;
+        gap: 6px;
+    }
+
+    &__text p {
+        margin-top: 5px;
+    }
+}
+

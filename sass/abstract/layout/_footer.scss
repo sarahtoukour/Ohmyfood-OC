@@ -1,0 +1,34 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    background: #373636;
+    color: #fff;
+    h1 {
+        font-family: $font-secondary;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-family: $font-primary;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    li {
+        list-style: none;
+    }
+    i {
+        margin-right: 10px;
+    }
+}   
+footer .fa-handshake-angle {
+    transform: translateX(-5px);
+    font-size: 14px;
+    margin: 3px;
+  }
