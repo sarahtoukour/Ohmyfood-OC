@@ -1,0 +1,93 @@
+.photo-menu {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.restaurant {
+    position: relative;
+    background-color: #dddbdb;
+    // width: 100%;
+    padding: 32px 16px;
+    margin-top: -50px;
+    border-radius: 25px 25px 0 0;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $font-secondary; 
+        padding: 20px 10px 10px 0px;
+    }
+}
+
+.heart-menu {
+    top: 28px;
+}
+
+.menu__cards {
+    @include flex-column;
+    gap: 15px;
+    font-family: $font-primary;
+
+    h3 {
+        font-weight: 400;
+        margin-top: 30px;
+        margin-left: 5px;
+    }
+}
+
+.menu__cards h3::after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 3px;
+    margin-top: 8px;
+    background-color: $color-ter;
+}
+
+.menu__card {
+    display: flex;
+    box-shadow: $box-shadow;
+    border-radius: 15px;
+    background-color: #f7f5f5;
+    // overflow: hidden;
+}
+
+.menu__card-all {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 16px;
+    padding: 14px;
+    overflow: hidden;
+}
+
+.menu__card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        
+    }
+
+    p {
+        margin-top: 2px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+.menu__card-price {
+    align-self: flex-end;
+}
+
+.menu__button {
+    display: block;
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
