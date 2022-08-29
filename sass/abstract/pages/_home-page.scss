@@ -1,144 +1,144 @@
-.location{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    gap: 18px;
-    font-family: $font-primary;
-    background-color: #e5e5e5;
-    box-shadow: inset 0px 8px 6px -6px rgb(146, 145, 145);
-    i{
-        font-size: 1.06rem;
-    }
-    h2{
-        font-size: 1rem;
-    }
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 18px;
+  font-family: $font-primary;
+  background-color: #e5e5e5;
+  box-shadow: inset 0px 8px 6px -6px rgb(146, 145, 145);
+  i {
+    font-size: 1.06rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
 }
 
 .explore {
-    font-family: $font-primary;
-    text-align: center;
-    padding: 20px 10px 60px 10px;
-    background-color: #f7f5f5;
-    &__text {
-        font-weight: 200;
-        margin-top: 10px;
-        margin-bottom: 25px;
-    }
+  font-family: $font-primary;
+  text-align: center;
+  padding: 20px 10px 60px 10px;
+  background-color: #f7f5f5;
+  &__text {
+    font-weight: 200;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
 }
 
 .options {
-    @include flex-column;
-    gap: 20px;
-    padding: 48px 16px 48px 24px;
-    font-family: $font-primary;
-    counter-reset: stepList;
+  @include flex-column;
+  gap: 20px;
+  padding: 48px 16px 48px 24px;
+  font-family: $font-primary;
+  counter-reset: stepList;
 }
 
 .options__choice {
+  display: flex;
+  position: relative;
+  padding: 26px 19px 26px 30px;
+  gap: 15px;
+  border-radius: 25px;
+  background-color: #f7f5f5;
+  box-shadow: $box-shadow;
+  font-weight: 500;
+  cursor: pointer;
+  max-width: 400px;
+
+  i {
+    opacity: 0.5;
+  }
+
+  &::before {
+    position: absolute;
+    left: -10px;
+    counter-increment: stepList 1;
+    content: counter(stepList) " ";
     display: flex;
-    position: relative;
-    padding: 26px 19px 26px 30px;
-    gap: 15px;
-    border-radius: 25px;
-    background-color: #f7f5f5;
-    box-shadow: $box-shadow;
-    font-weight: 500;
-    cursor: pointer;
-    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-prim;
+    border-radius: 100px;
+    width: 22px;
+    height: 22px;
+    color: white;
+  }
 
-    i{
-        opacity: 0.5;
-    }
+  &:hover {
+    background-color: #7045a52a;
+  }
 
-    &::before {
-        position: absolute;
-        left: -10px;
-        counter-increment: stepList 1;
-        content: counter(stepList) " ";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-prim;
-        border-radius: 100px;
-        width: 22px;
-        height: 22px;
-        color: white;
-    }
-
-    &:hover {
-        background-color: #7045a52a;
-    }
-
-    &:hover i {
-        color: $color-prim;
-        opacity: 1;
-    }
+  &:hover i {
+    color: $color-prim;
+    opacity: 1;
+  }
 }
 
 .restaurant_listing {
-    @include flex-column;
-    font-family: $font-primary;
-    padding: 48px 25px;
-    background: #f7f5f5;
-    gap: 25px;
+  @include flex-column;
+  font-family: $font-primary;
+  padding: 48px 25px;
+  background: #f7f5f5;
+  gap: 25px;
 }
 
 .cards {
-    @include flex-column;
-    gap: 30px;
+  @include flex-column;
+  gap: 30px;
 }
 
 .card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: $box-shadow;
+  text-decoration: none;
+
+  &__img {
+    object-fit: cover;
+    height: 160px;
+    width: 100%;
     background: #fff;
-    border-radius: 20px;
-    box-shadow:$box-shadow;
-    text-decoration: none;
-    
-    &__img {
-        object-fit: cover;
-        height: 160px;
-        width: 100%;
-        background: #fff;
-        border-radius: 20px 20px 0 0;
-        
-    }
+    border-radius: 20px 20px 0 0;
+  }
 
-    &__text {
-        padding: 12px 14px;
-        gap: 6px;
-    }
+   &__new {
+    position: absolute;
+    right: 42px;
+    margin-top: 20px;
+    padding: 5px 15px;
+    background-color: $color-ter;
+    color: #256b59;
+  }
 
-    &__text p {
-        margin-top: 5px;
-    }
+  &__text {
+    padding: 12px 14px;
+    gap: 6px;
+  }
 
-    &__heart {
-        position: relative;
-        i {
-            position :absolute;
-            right: 16px;
-            top: -40px;
-            font-size: 1.5rem;
-        }
-        i:hover{
-            transform: scale(1.3);
-            background-image: linear-gradient(163deg, rgba(238,115,218,1) 0%, rgba(160,91,220,1) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            opacity: 1;
-        }
-    }
-}
+  &__text p {
+    margin-top: 5px;
+  }
 
-.heart__regular {
-    &:hover{
-        color: transparent;
-        opacity: 0;
+  &__heart {
+    position: relative;
+    i {
+      position: absolute;
+      right: 16px;
+      top: -40px;
+      font-size: 1.5rem;
     }
+    i:hover {
+      transform: scale(1.3);
+      background-image: linear-gradient(0deg, $color-prim, $color-sec);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
 }
 
 .heart__solid {
-    color: transparent;
-    transition: ease-out all 400ms;
+  color: transparent;
+  transition: ease-out all 0.5s;
 }

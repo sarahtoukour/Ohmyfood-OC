@@ -31,82 +31,6 @@ button:hover {
   opacity: 0.8;
 }
 
-.loader {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: load 4s forwards;
-}
-
-.lettres {
-  color: hsl(267deg, 65%, 60%);
-  font-size: 50px;
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 150px;
-  animation: flash 1.2s linear infinite;
-  animation-iteration-count: 3s;
-}
-
-@keyframes flash {
-  0% {
-    color: hsl(267deg, 65%, 60%);
-  }
-  90% {
-    color: hsl(300deg, 100%, 73%);
-  }
-  100% {
-    color: hsl(267deg, 65%, 60%);
-  }
-}
-.lettres:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.lettres:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.lettres:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.lettres:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.lettres:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.lettres:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.lettres:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-.lettres:nth-child(8) {
-  animation-delay: 0.8s;
-}
-
-@keyframes load {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-    transition: ease-out;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .title {
   padding: 24px 24px 5px 24px;
   text-align: center;
@@ -269,6 +193,14 @@ footer .fa-handshake-angle {
   background: #fff;
   border-radius: 20px 20px 0 0;
 }
+.card__new {
+  position: absolute;
+  right: 42px;
+  margin-top: 20px;
+  padding: 5px 15px;
+  background-color: hsl(165deg, 55%, 74%);
+  color: #256b59;
+}
 .card__text {
   padding: 12px 14px;
   gap: 6px;
@@ -287,20 +219,14 @@ footer .fa-handshake-angle {
 }
 .card__heart i:hover {
   transform: scale(1.3);
-  background-image: linear-gradient(163deg, rgb(238, 115, 218) 0%, rgb(160, 91, 220) 100%);
+  background-image: linear-gradient(0deg, hsl(267deg, 65%, 60%), hsl(300deg, 100%, 73%));
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 1;
-}
-
-.heart__regular:hover {
-  color: transparent;
-  opacity: 0;
 }
 
 .heart__solid {
   color: transparent;
-  transition: ease-out all 400ms;
+  transition: ease-out all 0.5s;
 }
 
 .photo-menu {
@@ -326,6 +252,7 @@ footer .fa-handshake-angle {
 
 .heart-menu {
   top: 28px;
+  cursor: pointer;
 }
 
 .menu__cards {
@@ -333,6 +260,7 @@ footer .fa-handshake-angle {
   flex-direction: column;
   gap: 15px;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 .menu__cards h3 {
   font-weight: 400;
@@ -354,6 +282,7 @@ footer .fa-handshake-angle {
   box-shadow: 4px 4px 6px rgb(170, 170, 170);
   border-radius: 15px;
   background-color: #f7f5f5;
+  overflow: hidden;
 }
 
 .menu__card-all {
@@ -368,7 +297,6 @@ footer .fa-handshake-angle {
 .menu__card-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -386,10 +314,89 @@ footer .fa-handshake-angle {
   align-self: flex-end;
 }
 
+.menu__card-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  background-color: hsl(165deg, 55%, 74%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu__card:hover .menu__card-check {
+  width: 50px;
+  opacity: 1;
+}
+
+.fa-circle-check {
+  color: white;
+  font-size: 25px;
+}
+
+.menu__card:hover .fa-circle-check {
+  animation: rotate 0.4s ease-out 0.1s forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .menu__button {
   display: block;
   margin-top: 55px;
   margin-bottom: 30px;
+}
+
+.card1 {
+  animation: menu-delay 0.5s;
+}
+
+.card2 {
+  animation: menu-delay 1s;
+}
+
+.card3 {
+  animation: menu-delay 1.5s;
+}
+
+.card4 {
+  animation: menu-delay 2s;
+}
+
+.card5 {
+  animation: menu-delay 2.5s;
+}
+
+.card6 {
+  animation: menu-delay 3s;
+}
+
+.card7 {
+  animation: menu-delay 3.5s;
+}
+
+.card8 {
+  animation: menu-delay 4s;
+}
+
+.card9 {
+  animation: menu-delay 4.5s;
+}
+
+@keyframes menu-delay {
+  from {
+    margin-top: 48px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

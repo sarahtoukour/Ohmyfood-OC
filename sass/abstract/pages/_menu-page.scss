@@ -1,93 +1,163 @@
 .photo-menu {
-    object-fit: cover;
-    height: 250px;
-    width: 100%;
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
 }
 
 .restaurant {
-    position: relative;
-    background-color: #dddbdb;
-    // width: 100%;
-    padding: 32px 16px;
-    margin-top: -50px;
-    border-radius: 25px 25px 0 0;
+  position: relative;
+  background-color: #dddbdb;
+  padding: 32px 16px;
+  margin-top: -50px;
+  border-radius: 25px 25px 0 0;
 
-    &__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: $font-secondary; 
-        padding: 20px 10px 10px 0px;
-    }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-secondary;
+    padding: 20px 10px 10px 0px;
+  }
 }
 
 .heart-menu {
-    top: 28px;
+  top: 28px;
+  cursor: pointer;
 }
 
 .menu__cards {
-    @include flex-column;
-    gap: 15px;
-    font-family: $font-primary;
+  @include flex-column;
+  gap: 15px;
+  font-family: $font-primary;
+  cursor: pointer;
 
-    h3 {
-        font-weight: 400;
-        margin-top: 30px;
-        margin-left: 5px;
-    }
+  h3 {
+    font-weight: 400;
+    margin-top: 30px;
+    margin-left: 5px;
+  }
 }
 
 .menu__cards h3::after {
-    content: "";
-    display: block;
-    width: 46px;
-    height: 3px;
-    margin-top: 8px;
-    background-color: $color-ter;
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin-top: 8px;
+  background-color: $color-ter;
 }
 
 .menu__card {
-    display: flex;
-    box-shadow: $box-shadow;
-    border-radius: 15px;
-    background-color: #f7f5f5;
-    // overflow: hidden;
+  display: flex;
+  box-shadow: $box-shadow;
+  border-radius: 15px;
+  background-color: #f7f5f5;
+  overflow: hidden;
 }
 
 .menu__card-all {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    gap: 16px;
-    padding: 14px;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 16px;
+  padding: 14px;
+  overflow: hidden;
 }
 
 .menu__card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    white-space: nowrap;
+  @include flex-column;
+  white-space: nowrap;
+  overflow: hidden;
+  h4 {
+    text-overflow: ellipsis;
     overflow: hidden;
-    h4 {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        
-    }
+  }
 
-    p {
-        margin-top: 2px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
+  p {
+    margin-top: 2px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 .menu__card-price {
-    align-self: flex-end;
+  align-self: flex-end;
+}
+
+.menu__card-check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    background-color: $color-ter;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu__card:hover .menu__card-check{
+    width: 50px;
+    opacity: 1;
+}
+
+.fa-circle-check{
+    color: white;
+    font-size: 25px;
+}
+
+.menu__card:hover .fa-circle-check {
+    animation: rotate 0.4s ease-out 0.1s forwards;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 .menu__button {
-    display: block;
-    margin-top: 55px;
-    margin-bottom: 30px;
+  display: block;
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+
+.card1{
+  animation: menu-delay 0.5s;
+}
+.card2{
+  animation: menu-delay 1s;
+}
+.card3{
+  animation: menu-delay 1.5s;
+}
+.card4{
+  animation: menu-delay 2s;
+}
+.card5{
+  animation: menu-delay 2.5s;
+}
+.card6{
+  animation: menu-delay 3s;
+}
+.card7{
+  animation: menu-delay 3.5s;
+}
+.card8{
+  animation: menu-delay 4s;
+}
+.card9{
+  animation: menu-delay 4.5s;
+}
+
+@keyframes menu-delay{
+    from{ 
+        margin-top: 48px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
 }
