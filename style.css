@@ -31,6 +31,85 @@ button:hover {
   opacity: 0.8;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: load 5s forwards;
+}
+
+.lettres {
+  color: hsl(267deg, 65%, 60%);
+  font-size: 50px;
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 150px;
+  animation: flash 1.2s linear infinite;
+  animation-iteration-count: 3;
+}
+
+@keyframes flash {
+  0% {
+    color: hsl(267deg, 65%, 60%);
+  }
+  90% {
+    color: hsl(300deg, 100%, 73%);
+  }
+  100% {
+    color: hsl(267deg, 65%, 60%);
+  }
+}
+.lettres:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lettres:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettres:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettres:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettres:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettres:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettres:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.lettres:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  90% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 .title {
   padding: 24px 24px 5px 24px;
   text-align: center;
@@ -247,7 +326,6 @@ footer .fa-handshake-angle {
   justify-content: space-between;
   align-items: center;
   font-family: "Shrikhand", cursive;
-  padding: 20px 10px 10px 0px;
 }
 
 .heart-menu {
@@ -299,6 +377,8 @@ footer .fa-handshake-angle {
   flex-direction: column;
   white-space: nowrap;
   overflow: hidden;
+  width: 250px;
+  transition: 0.4s;
 }
 .menu__card-text h4 {
   text-overflow: ellipsis;
@@ -312,6 +392,7 @@ footer .fa-handshake-angle {
 
 .menu__card-price {
   align-self: flex-end;
+  width: 28px;
 }
 
 .menu__card-check {
@@ -329,13 +410,17 @@ footer .fa-handshake-angle {
   opacity: 1;
 }
 
+.menu__card:hover .fa-circle-check {
+  animation: rotate 0.4s ease-out 0.1s forwards;
+}
+
 .fa-circle-check {
   color: white;
   font-size: 25px;
 }
 
-.menu__card:hover .fa-circle-check {
-  animation: rotate 0.4s ease-out 0.1s forwards;
+.menu__card:hover .menu__card-text {
+  width: 150px;
 }
 
 @keyframes rotate {
@@ -390,12 +475,12 @@ footer .fa-handshake-angle {
 
 @keyframes menu-delay {
   from {
-    margin-top: 48px;
     opacity: 0;
+    transform: translateY(-100%);
   }
   to {
-    margin-top: 0;
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 

@@ -16,7 +16,6 @@
     justify-content: space-between;
     align-items: center;
     font-family: $font-secondary;
-    padding: 20px 10px 10px 0px;
   }
 }
 
@@ -68,6 +67,9 @@
   @include flex-column;
   white-space: nowrap;
   overflow: hidden;
+  width: 250px;
+  transition: 0.4s;
+
   h4 {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -82,39 +84,47 @@
 
 .menu__card-price {
   align-self: flex-end;
+  width: 28px;
 }
 
-.menu__card-check{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 0;
-    background-color: $color-ter;
-    opacity: 0;
-    transition: 0.5s;
+.menu__card-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  background-color: $color-ter;
+  opacity: 0;
+  transition: 0.5s;
 }
 
-.menu__card:hover .menu__card-check{
-    width: 50px;
-    opacity: 1;
-}
-
-.fa-circle-check{
-    color: white;
-    font-size: 25px;
+.menu__card:hover .menu__card-check {
+  width: 50px;
+  opacity: 1;
 }
 
 .menu__card:hover .fa-circle-check {
-    animation: rotate 0.4s ease-out 0.1s forwards;
+  animation: rotate 0.4s ease-out 0.1s forwards;
 }
 
+.fa-circle-check {
+  color: white;
+  font-size: 25px;
+}
+
+.menu__card:hover .menu__card-text {
+  width: 150px;
+
+}
+
+
 @keyframes rotate {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .menu__button {
@@ -123,41 +133,50 @@
   margin-bottom: 30px;
 }
 
-.card1{
+.card1 {
   animation: menu-delay 0.5s;
 }
-.card2{
+
+.card2 {
   animation: menu-delay 1s;
 }
-.card3{
+
+.card3 {
   animation: menu-delay 1.5s;
 }
-.card4{
+
+.card4 {
   animation: menu-delay 2s;
 }
-.card5{
+
+.card5 {
   animation: menu-delay 2.5s;
 }
-.card6{
+
+.card6 {
   animation: menu-delay 3s;
 }
-.card7{
+
+.card7 {
   animation: menu-delay 3.5s;
 }
-.card8{
+
+.card8 {
   animation: menu-delay 4s;
 }
-.card9{
+
+.card9 {
   animation: menu-delay 4.5s;
 }
 
-@keyframes menu-delay{
-    from{ 
-        margin-top: 48px;
-        opacity: 0;
-    }
-    to{
-        margin-top: 0;
-        opacity: 1;
-    }
+@keyframes menu-delay {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
