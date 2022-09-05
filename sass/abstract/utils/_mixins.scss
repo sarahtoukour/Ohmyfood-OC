@@ -2,3 +2,27 @@
     display: flex;
     flex-direction: column;
 }
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin mobile {
+    @media screen and (min-width: 460px) {
+        @content;
+    }
+}
+
+@mixin tablette {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}

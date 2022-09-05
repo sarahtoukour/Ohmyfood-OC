@@ -33,19 +33,46 @@
   padding: 48px 16px 48px 24px;
   font-family: $font-primary;
   counter-reset: stepList;
+  
+  @include tablette {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
+
+.options__all {
+ @include tablette {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+ }
+}
+.options__title {
+  @include tablette {
+    text-align: center;
+    padding-bottom: 10px;
+  }
 }
 
 .options__choice {
   display: flex;
   position: relative;
   padding: 26px 19px 26px 30px;
+  margin-bottom: 25px;
   gap: 15px;
   border-radius: 25px;
   background-color: #f7f5f5;
   box-shadow: $box-shadow;
   font-weight: 500;
   cursor: pointer;
-  max-width: 400px;
+  
+  @include tablette {
+    margin-right: 30px;
+  }
+ 
+ 
+ 
 
   i {
     opacity: 0.5;

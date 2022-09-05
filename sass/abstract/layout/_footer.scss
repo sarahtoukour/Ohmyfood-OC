@@ -4,6 +4,10 @@ footer {
     padding: 15px;
     background: #181818;
     color: #fff;
+    @include tablette {
+            @include flex-center;
+            flex-direction: column;
+        }
     h1 {
         font-family: $font-secondary;
         font-weight: 500;
@@ -17,6 +21,17 @@ footer {
     ul{
         @include flex-column;
         gap: 7px;
+        @include tablette {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-direction: row;
+                gap: 50px;
+            }
+        
+            @include desktop {
+                max-width: 80%;
+            }
     }
     li {
         list-style: none;
