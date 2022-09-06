@@ -1,7 +1,5 @@
 .location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   padding: 15px;
   gap: 18px;
   font-family: $font-primary;
@@ -111,9 +109,23 @@
   gap: 25px;
 }
 
+.restaurant__title1 {
+  @include tablette {
+    text-align: center
+  }
+}
+
 .cards {
-  @include flex-column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+
+  @include tablette {
+  justify-content: center;
+  margin: 30px auto;
+  gap: 50px;
+  }
 }
 
 .card {
@@ -121,6 +133,17 @@
   border-radius: 20px;
   box-shadow: $box-shadow;
   text-decoration: none;
+  width: 100%;
+
+  @include tablette {
+    max-width: 330px;
+  }
+
+  @include desktop {
+    max-width: 446px;
+  }
+
+ 
 
   &__img {
     object-fit: cover;
@@ -128,15 +151,10 @@
     width: 100%;
     background: #fff;
     border-radius: 20px 20px 0 0;
-  }
 
-   &__new {
-    position: absolute;
-    right: 42px;
-    margin-top: 20px;
-    padding: 5px 15px;
-    background-color: $color-ter;
-    color: #256b59;
+    @include desktop {
+      height: 230px;
+    }
   }
 
   &__text {
@@ -168,4 +186,18 @@
 .heart__solid {
   color: transparent;
   transition: ease-out all 0.5s;
+}
+
+.new {
+  position: relative;
+  &::after {
+    content: 'Nouveau';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: $color-ter;
+    color: green;
+    padding: 5px 15px;
+    font-weight: 500;
+  }
 }
