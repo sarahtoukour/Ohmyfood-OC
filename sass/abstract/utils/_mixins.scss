@@ -9,12 +9,6 @@
     align-items: center;
 }
 
-@mixin mobile {
-    @media screen and (min-width: 460px) {
-        @content;
-    }
-}
-
 @mixin tablette {
     @media screen and (min-width: 768px) {
         @content;

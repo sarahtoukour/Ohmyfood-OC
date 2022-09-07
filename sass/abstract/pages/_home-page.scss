@@ -31,7 +31,6 @@
   padding: 48px 16px 48px 24px;
   font-family: $font-primary;
   counter-reset: stepList;
-  
   @include tablette {
     max-width: 1500px;
     margin: auto;
@@ -39,12 +38,12 @@
 }
 
 .options__all {
- @include tablette {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
- }
+  @include tablette {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 .options__title {
   @include tablette {
@@ -64,14 +63,9 @@
   box-shadow: $box-shadow;
   font-weight: 500;
   cursor: pointer;
-  
-  @include tablette {
-    margin-right: 30px;
-  }
- 
- 
- 
-
+    @include tablette {
+     margin-right: 30px;
+    }
   i {
     opacity: 0.5;
   }
@@ -81,9 +75,7 @@
     left: -10px;
     counter-increment: stepList 1;
     content: counter(stepList) " ";
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     background-color: $color-prim;
     border-radius: 100px;
     width: 22px;
@@ -120,12 +112,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-
-  @include tablette {
-  justify-content: center;
-  margin: 30px auto;
-  gap: 50px;
-  }
+    @include tablette {
+      justify-content: center;
+      margin: 30px auto;
+      gap: 50px;
+    }
 }
 
 .card {
@@ -134,16 +125,12 @@
   box-shadow: $box-shadow;
   text-decoration: none;
   width: 100%;
-
-  @include tablette {
-    max-width: 330px;
-  }
-
-  @include desktop {
-    max-width: 446px;
-  }
-
- 
+    @include tablette {
+      max-width: 325px;
+    }
+    @include desktop {
+      max-width: 437px;
+    }
 
   &__img {
     object-fit: cover;
@@ -151,10 +138,9 @@
     width: 100%;
     background: #fff;
     border-radius: 20px 20px 0 0;
-
-    @include desktop {
-      height: 230px;
-    }
+      @include desktop {
+        height: 230px;
+      }
   }
 
   &__text {
