@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss style.css"
+    "sass": "sass --watch sass/main.scss style.css -w --style compressed",
+    "prefix": "postcss style.css --use autoprefixer -d prefixed"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,6 @@
   "homepage": "https://github.com/sarahtoukour/Ohmyfood#readme",
   "devDependencies": {
     "sass": "^1.54.4"
-  }
+  },
+  "browserslist": "last 4 versions"
 }
