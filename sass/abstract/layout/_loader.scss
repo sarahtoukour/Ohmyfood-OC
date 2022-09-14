@@ -6,15 +6,15 @@
     height: 100%;
     background: #fff;
     @include flex-center;
-    animation: load 6s forwards;
+    animation: load 7s forwards;
 }
 .lettres {
     color: $color-prim;
     font-size: 3.125rem;
     font-family: $font-secondary;
     margin-bottom: 150px;
-    animation: flash 1.5s linear infinite;
-    animation-iteration-count: 4;
+    animation: flash 1.5s linear;
+    animation-iteration-count: 3;
 }
 @keyframes flash {
     0%{

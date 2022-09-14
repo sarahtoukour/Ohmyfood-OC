@@ -96,7 +96,7 @@
   }
 }
 
-.restaurant_listing {
+.restaurant__listing {
   @include flex-column;
   font-family: $font-primary;
   padding: 48px 25px;
@@ -174,7 +174,7 @@
 
 .heart__solid {
   color: transparent;
-  transition: ease-out all 0.5s;
+  transition: ease-out 0.5s;
 }
 
 .new {

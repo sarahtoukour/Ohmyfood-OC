@@ -90,9 +90,7 @@
     padding-left: 20px;
   }
   &-check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     width: 0;
     height: auto;
     background-color: $color-ter;
@@ -107,7 +105,7 @@
 }
 
 .menu__card:hover .fa-circle-check {
-  animation: rotate 0.4s ease-out 0.1s;
+  animation: rotate 0.5s 0.1s;
 }
 
 .fa-circle-check {
@@ -115,8 +113,8 @@
   font-size: 25px;
 }
 
-.menu__card:hover .menu__card-text {
-  width: 150px;
+.menu__card:hover .menu__card-all {
+  width: 180px;
 }
 
 @keyframes rotate {
