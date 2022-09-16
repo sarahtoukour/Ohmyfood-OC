@@ -87,7 +87,7 @@
   }
 
   &:hover {
-    background-color: #7045a52a;
+    background-color: #d06ad72a;
   }
 
   &:hover i {
@@ -164,16 +164,17 @@
       font-size: 1.5rem;
     }
     i:hover {
-      transform: scale(1.4);
+      opacity: 1;
       background-image: linear-gradient(0deg, $color-prim, $color-sec);
       background-clip: text;
       -webkit-background-clip: text;
+      color: transparent;
     }
   }
 }
 
 .heart__solid {
-  color: transparent;
+  opacity: 0;
   transition: ease-out 0.5s;
 }
 
