@@ -1,23 +1,23 @@
 .title {
-    padding: 24px 24px 5px 24px;
-    text-align: center;
-    font-family: $font-secondary;
+  padding: 24px 24px 5px 24px;
+  text-align: center;
+  font-family: $font-secondary;
 }
 
 .header__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    font-family: $font-secondary;
-    margin-top: 20px;
-    margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: $font-secondary;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .arrow {
-    position: absolute;
-    left: 20px;
+  position: absolute;
+  left: 20px;
 
-    i {
-        font-weight: 900;
-    }
+  i {
+    font-weight: 900;
+  }
 }

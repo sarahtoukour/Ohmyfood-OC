@@ -66,9 +66,9 @@
   box-shadow: $box-shadow;
   font-weight: 500;
   cursor: pointer;
-    @include tablette {
-     margin-right: 30px;
-    }
+  @include tablette {
+    margin-right: 30px;
+  }
   i {
     opacity: 0.5;
   }
@@ -106,7 +106,7 @@
 
 .restaurant__title1 {
   @include tablette {
-    text-align: center
+    text-align: center;
   }
 }
 
@@ -115,11 +115,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-    @include tablette {
-      justify-content: center;
-      margin: 30px auto;
-      gap: 50px;
-    }
+  @include tablette {
+    justify-content: center;
+    margin: 30px auto;
+    gap: 50px;
+  }
 }
 
 .card {
@@ -128,12 +128,12 @@
   box-shadow: $box-shadow;
   text-decoration: none;
   width: 100%;
-    @include tablette {
-      max-width: 325px;
-    }
-    @include desktop {
-      max-width: 437px;
-    }
+  @include tablette {
+    max-width: 325px;
+  }
+  @include desktop {
+    max-width: 437px;
+  }
 
   &__img {
     object-fit: cover;
@@ -141,9 +141,9 @@
     width: 100%;
     background: #fff;
     border-radius: 20px 20px 0 0;
-      @include desktop {
-        height: 230px;
-      }
+    @include desktop {
+      height: 230px;
+    }
   }
 
   &__text {
@@ -181,7 +181,7 @@
 .new {
   position: relative;
   &::after {
-    content: 'Nouveau';
+    content: "Nouveau";
     position: absolute;
     top: 20px;
     right: 20px;

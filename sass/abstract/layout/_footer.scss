@@ -1,49 +1,49 @@
 footer {
-    @include flex-column;
-    gap: 15px;
-    padding: 30px;
-    background: #181818;
-    color: #fff;
-        @include tablette {
-            @include flex-center;
-            flex-direction: column;
-        }
-    h1 {
-        font-family: $font-secondary;
-        font-weight: 500;
-        font-size: 1.3rem;
-    }
-    a {
-        text-decoration: none;
-        color: #fff;
-        font-family: $font-primary;
-        &:hover {
-            color: $color-sec;
-        }
-    }
-    ul{
-        @include flex-column;
-        gap: 7px;
-            @include tablette {
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                flex-direction: row;
-                gap: 50px;
-            }
-            @include desktop {
-                max-width: 80%;
-            }
-    }
-    li {
-        list-style: none;
-    }
-    i {
-        margin-right: 10px;
-    }
-}   
-footer .fa-handshake-angle {
-    transform: translateX(-5px);
-    font-size: 14px;
-    margin: 3px;
+  @include flex-column;
+  gap: 15px;
+  padding: 30px;
+  background: #181818;
+  color: #fff;
+  @include tablette {
+    @include flex-center;
+    flex-direction: column;
   }
+  h1 {
+    font-family: $font-secondary;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-family: $font-primary;
+    &:hover {
+      color: $color-sec;
+    }
+  }
+  ul {
+    @include flex-column;
+    gap: 7px;
+    @include tablette {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: row;
+      gap: 50px;
+    }
+    @include desktop {
+      max-width: 80%;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  i {
+    margin-right: 10px;
+  }
+}
+footer .fa-handshake-angle {
+  transform: translateX(-5px);
+  font-size: 14px;
+  margin: 3px;
+}
